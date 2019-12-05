@@ -13,6 +13,28 @@
 </head>
 
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v5.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="103134611177822" logged_in_greeting="Hi! How can I help you?"
+        logged_out_greeting="Hi! How can I help you?">
+    </div>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
         <div class="container"><a class="navbar-brand logo" href="index.html">Elizabeth Adegbaju</a><button data-toggle="collapse"
                 class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span
@@ -166,7 +188,7 @@
             <div class="social-icons"><a href="https://web.facebook.com/elizabethadegbaju" target="_blank"><i class="icon ion-social-facebook"></i></a><a
                     href="https://www.instagram.com/elizabeth_adegbaju" target="_blank"><i class="icon ion-social-instagram-outline"></i></a>
                 <a href="https://www.twitter.com/leez_2904" target="_blank"><i class="icon ion-social-twitter"></i></a><a
-                href="https://www.linkedin.com/in/elizabethadegbaju" target="_blank"><i class="icon ion-social-linkedin"></i></a>
+                    href="https://www.linkedin.com/in/elizabethadegbaju" target="_blank"><i class="icon ion-social-linkedin"></i></a>
             </div>
         </div>
     </footer>

@@ -13,6 +13,28 @@
 </head>
 
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v5.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="103134611177822" logged_in_greeting="Hi! How can I help you?"
+        logged_out_greeting="Hi! How can I help you?">
+    </div>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
         <div class="container"><a class="navbar-brand logo" href="index.html">Elizabeth Adegbaju</a><button data-toggle="collapse"
                 class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span
@@ -36,8 +58,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="https://www.winsomebc.com.ng"><img class="card-img-top scale-on-hover" src="assets/img/winsome-home.jpg"
-                                    alt="Card Image"></a>
+                        <div class="card border-0"><a href="https://www.winsomebc.com.ng"><img class="card-img-top scale-on-hover"
+                                    src="assets/img/winsome-home.jpg" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="https://www.winsomebc.com.ng">Winsome Beauty Collections</a></h6>
                                 <p class="text-muted card-text">An online catalogue for Winsome Beauty Collections</p>
@@ -54,11 +76,12 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="https://www.teenshackathon.com"><img class="card-img-top scale-on-hover" src="assets/img/hackathon.png"
-                                    alt="Card Image"></a>
+                        <div class="card border-0"><a href="https://www.teenshackathon.com"><img class="card-img-top scale-on-hover"
+                                    src="assets/img/hackathon.png" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="https://www.teenshackathon.com">Teens Hackathon</a></h6>
-                                <p class="text-muted card-text">Website Development Training for teenagers in Christ Embassy International, Oregun</p>
+                                <p class="text-muted card-text">Website Development Training for teenagers in Christ
+                                    Embassy International, Oregun</p>
                             </div>
                         </div>
                     </div>
@@ -67,7 +90,8 @@
                                     alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">Sheba</a></h6>
-                                <p class="text-muted card-text">Android application developed while practicing UI design.</p>
+                                <p class="text-muted card-text">Android application developed while practicing UI
+                                    design.</p>
                             </div>
                         </div>
                     </div>
@@ -76,7 +100,8 @@
                                     alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">Travelmantics</a></h6>
-                                <p class="text-muted card-text">Android Application developed during ALC 4.0  training in the Android Track.</p>
+                                <p class="text-muted card-text">Android Application developed during ALC 4.0 training
+                                    in the Android Track.</p>
                             </div>
                         </div>
                     </div>
